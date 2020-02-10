@@ -1,0 +1,10 @@
+#takes input labels which is a list of labels, counts the number of unique labels in the dataset, returns impurity; lower impurity is better
+def gini(labels):
+  impurity = 1
+  label_counts = Counter(labels)
+  for label in labels:
+    probability_of_label = label_counts[label] / len(labels)
+    impurity -= probability_of_label **2
+    return print(impurity)
+  
+gini(labels)
